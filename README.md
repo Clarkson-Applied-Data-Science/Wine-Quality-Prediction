@@ -172,7 +172,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-![alt text](image-4.png) 
+![alt text](image-5.png) 
 
 ### **3. Explore relationships between features and quality ratings.**
 ```
@@ -188,7 +188,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-![alt text](image-5.png)
+![alt text](image-6.png)
 
 ### **4. Engineer new features if necessary to capture additional information that may influence wine quality.**
 ```
@@ -196,7 +196,7 @@ sns.pairplot(data)
 plt.show()
 ```
 
-![alt text](image-8.png)
+![alt text](image-7.png)
 
 ## **Data Preprocessing:**
 ### **1. Assess the presence of missing data**
@@ -241,7 +241,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-![alt text](image-6.png)
+![alt text](image-8.png)
 
 ### **3. Remove outliers based on the upper bound of the interquartile range.**
 ```
@@ -275,8 +275,6 @@ for column in data.drop(columns=['quality','color']).columns:
 data
 ```
 
-![alt text](image-7.png)
-
 ### **5. Handle multicollinearity by dropping less correlated features ('color' and 'density').**
 ```
 plt.figure(figsize=(10,8))
@@ -284,7 +282,7 @@ sns.heatmap(data.drop(columns=['quality']).corr(),annot=True)
 plt.show()
 ```
 
-![alt text](image-8.png)
+![alt text](image-9.png)
 
 ```
 These features are correlated (correlation value > 0.65 or < -0.65)
@@ -298,7 +296,7 @@ sns.heatmap(data.corr()[['quality']],annot=True)
 plt.show()
 ```
 
-![alt text](image-9.png)
+![alt text](image-10.png)
 
 **After comparing all the features with the target variable, 'color' & 'density' are less correlated with the target variable. So we are removing these features.**
 
@@ -325,7 +323,7 @@ quality
 Name: count, dtype: int64
 ```
 
- ![alt text](image-10.png)
+ ![alt text](image-11.png)
 
 
 ### **2. Balance the dataset using SMOTE (Synthetic Minority Over-sampling Technique) and random undersampling.**
