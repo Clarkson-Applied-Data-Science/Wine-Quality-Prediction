@@ -53,7 +53,7 @@ red_wine = pd.read_csv("winequality_red.csv", delimiter=";")
 red_wine
 ```
 
-![alt text](image-4.png)
+![alt text](image-1.png)
 
 ### **3. Merge the datasets based on common columns.**
 ```
@@ -63,7 +63,7 @@ dataset = red_wine.merge(white_wine,how='outer')
 dataset
 ```
 
-![alt text](image-5.png)
+![alt text](image-2.png)
 
 ### **4. Reserve 50 random observations for testing and remove them from the main dataset.**
 ```
@@ -83,7 +83,7 @@ data.info()
 data.describe()
 ```
 
-![alt text](image-6.png)
+![alt text](image-3.png)
 
 ### **6. Explore the Features** 
 ```
@@ -147,7 +147,7 @@ Feature:  color
 Data type: object
 Unique values :  2
 ```
-
+![alt text](image-4.png)
 
 ## **Exploratory data analysis (EDA)**
 ### **1. Convert the 'color' column to numeric values ('Red' as 0 and 'White' as 1) for classification.**
@@ -172,7 +172,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-![alt text](image-1.png) 
+![alt text](image-4.png) 
 
 ### **3. Explore relationships between features and quality ratings.**
 ```
@@ -188,7 +188,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-![alt text](image-2.png)
+![alt text](image-5.png)
 
 ### **4. Engineer new features if necessary to capture additional information that may influence wine quality.**
 ```
@@ -241,7 +241,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-![alt text](image-9.png)
+![alt text](image-6.png)
 
 ### **3. Remove outliers based on the upper bound of the interquartile range.**
 ```
@@ -275,7 +275,7 @@ for column in data.drop(columns=['quality','color']).columns:
 data
 ```
 
-![alt text](image-10.png)
+![alt text](image-7.png)
 
 ### **5. Handle multicollinearity by dropping less correlated features ('color' and 'density').**
 ```
@@ -284,7 +284,7 @@ sns.heatmap(data.drop(columns=['quality']).corr(),annot=True)
 plt.show()
 ```
 
-![alt text](image-11.png)
+![alt text](image-8.png)
 
 ```
 These features are correlated (correlation value > 0.65 or < -0.65)
@@ -298,7 +298,7 @@ sns.heatmap(data.corr()[['quality']],annot=True)
 plt.show()
 ```
 
-![alt text](image-12.png)
+![alt text](image-9.png)
 
 **After comparing all the features with the target variable, 'color' & 'density' are less correlated with the target variable. So we are removing these features.**
 
@@ -325,7 +325,7 @@ quality
 Name: count, dtype: int64
 ```
 
- ![alt text](image-13.png)
+ ![alt text](image-10.png)
 
 
 ### **2. Balance the dataset using SMOTE (Synthetic Minority Over-sampling Technique) and random undersampling.**
