@@ -1,4 +1,4 @@
-Predicting Quality of Portuguese Vinho  
+<h1 align="center">Predicting Quality of Portuguese Vinho</h1>
 
 
 ## **Objective:**
