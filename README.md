@@ -77,7 +77,28 @@ data = dataset.drop(indicies,axis=0)
 data.info()
 ```
 
-<img src="image.png" alt="alt text" width="500">
+```
+<class 'pandas.core.frame.DataFrame'>
+Index: 6447 entries, 0 to 6496
+Data columns (total 13 columns):
+ #   Column                Non-Null Count  Dtype  
+---  ------                --------------  -----  
+ 0   fixed acidity         6447 non-null   float64
+ 1   volatile acidity      6447 non-null   float64
+ 2   citric acid           6447 non-null   float64
+ 3   residual sugar        6447 non-null   float64
+ 4   chlorides             6447 non-null   float64
+ 5   free sulfur dioxide   6447 non-null   float64
+ 6   total sulfur dioxide  6447 non-null   float64
+ 7   density               6447 non-null   float64
+ 8   pH                    6447 non-null   float64
+ 9   sulphates             6447 non-null   float64
+ 10  alcohol               6447 non-null   float64
+ 11  quality               6447 non-null   int64  
+ 12  color                 6447 non-null   object 
+dtypes: float64(11), int64(1), object(1)
+memory usage: 705.1+ KB
+```
 
 ```
 data.describe()
