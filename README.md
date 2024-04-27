@@ -5,10 +5,11 @@ Harshitha Pinupa
 
 ## **Objective:**
 The objective of this project is to develop a predictive model that can accurately predict the quality of Portuguese Vinho wine based on its physicochemical properties.
-
+we got this data from https://archive.ics.uci.edu/dataset/186/wine+quality
 
 ## **Dataset Description:**
 The dataset contains physicochemical attributes of red and white variants of Vinho, as well as their respective quality ratings. The attributes include fixed acidity, volatile acidity, citric acid, residual sugar, chlorides, free sulfur dioxide, total sulfur dioxide, density, pH, sulphates, alcohol content, and color (red or white). The quality ratings range from 3 to 9.
+
 
 
 ## **Features Description:**
