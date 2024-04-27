@@ -1,6 +1,7 @@
 <h1 align="center">Predicting Quality of Portuguese Vinho</h1>
-
-
+Submitted by:
+Harshitha Kotari
+Harshitha Pinupa
 
 ## **Objective:**
 The objective of this project is to develop a predictive model that can accurately predict the quality of Portuguese Vinho wine based on its physicochemical properties.
