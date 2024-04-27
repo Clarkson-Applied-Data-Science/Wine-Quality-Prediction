@@ -1,6 +1,7 @@
 <h1 align="center">Predicting Quality of Portuguese Vinho</h1>
 
 
+
 ## **Objective:**
 The objective of this project is to develop a predictive model that can accurately predict the quality of Portuguese Vinho wine based on its physicochemical properties.
 
@@ -579,4 +580,20 @@ Classification Report:
 weighted avg       0.54      0.48      0.50        50
 
 ```
+## **Validations:**
+``` python
+d = np.array([[-0.57, -0.56, -0.32, -0.69, -0.34, -0.51, 0.26, 0.65, 0.52, 0.07],
+              [-0.57, -0.56, -0.32, -0.69, -0.34, -0.51, 0.26, 0.65, 0.52, 50],
+              [-100, -100,100,-100, -100, 100, -100, 100, 100, 100]])
+for row in d:
+    print(rf.predict(row.reshape(1,-1)))
+```
 
+```
+[6]
+[7]
+[8]
+```
+
+**Conclusion:**
+In conclusion, while the model initially exhibited outstanding performance on both training and test sets, its accuracy plummeted to 48% when evaluated on new data. Precision and recall declined notably, especially for classes 3, 4, and 8, as evidenced by misclassifications in the confusion matrix. The observed relationship between wine quality and chemical composition, emphasizing the importance of reducing volatile acidity and chlorides while increasing alcohol content, provides valuable insights for refining the model. Further enhancements, including feature selection and hyperparameter tuning, are imperative to bolster the model's ability to generalize effectively to unseen data and accurately predict wine quality.
